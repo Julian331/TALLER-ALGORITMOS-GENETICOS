@@ -14,7 +14,7 @@ python3 exacto.py              # verdad de terreno: enumeración, PD, voraz, lam
 python3 baseline.py            # línea base aleatoria + autoprueba analítica
 python3 verificar_genetico.py  # 9 pruebas de verificación del AG
 python3 traza_manual.py        # traza completa de una iteración (punto 3)
-python3 punto5_literal.py      # respuesta literal al punto 5 del enunciado:
+python3 punto5.py              # respuesta literal al punto 5 del enunciado:
                                 #   5 ejecuciones con la config. inicial + tabla
                                 #   A/B/C (una corrida c/u) + grafica comparativa
 python3 experimentos.py        # estudio estadistico extendido -> RESULTADOS/resultados.json
@@ -39,7 +39,7 @@ src/
   genetico.py            las nueve funciones exigidas + medición de diversidad
   verificar_genetico.py  pruebas de verificación
   traza_manual.py        traza paso a paso de una iteración (punto 3)
-  punto5_literal.py      respuesta literal al punto 5 (5 corridas + tabla A/B/C + grafica)
+  punto5.py              respuesta literal al punto 5 (5 corridas + tabla A/B/C + grafica)
   experimentos.py        estudio extendido: factorial, barrido de lambda, McNemar, Holm
   graficas.py            figuras del estudio extendido
 RESULTADOS/
