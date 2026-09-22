@@ -14,12 +14,18 @@ python3 exacto.py              # verdad de terreno: enumeración, PD, voraz, lam
 python3 baseline.py            # línea base aleatoria + autoprueba analítica
 python3 verificar_genetico.py  # 9 pruebas de verificación del AG
 python3 traza_manual.py        # traza completa de una iteración (punto 3)
-python3 experimentos.py        # experimentos completos -> resultados/resultados.json
-python3 graficas.py            # figuras -> resultados/fig*.pdf y fig*.png
+python3 punto5_literal.py      # respuesta literal al punto 5 del enunciado:
+                                #   5 ejecuciones con la config. inicial + tabla
+                                #   A/B/C (una corrida c/u) + grafica comparativa
+python3 experimentos.py        # estudio estadistico extendido -> RESULTADOS/resultados.json
+python3 graficas.py            # figuras del estudio extendido -> RESULTADOS/fig*.pdf y fig*.png
 ```
 
-`experimentos.py` tarda unos 45 segundos (2200 ejecuciones). `graficas.py`
-requiere que `experimentos.py` se haya ejecutado antes.
+`experimentos.py` tarda unos 45 segundos (2200 ejecuciones) y genera el
+estudio estadístico extendido (factorial, barrido de lambda, comparación
+contra búsqueda aleatoria). `graficas.py` requiere que `experimentos.py` se
+haya ejecutado antes. `punto5_literal.py` es independiente de ambos y basta
+por sí solo para cubrir lo que pide el enunciado en el punto 5.
 
 
 ## Estructura
@@ -33,15 +39,15 @@ src/
   genetico.py            las nueve funciones exigidas + medición de diversidad
   verificar_genetico.py  pruebas de verificación
   traza_manual.py        traza paso a paso de una iteración (punto 3)
-  experimentos.py        factorial, barrido de lambda, A/B/C, McNemar, Holm
-  graficas.py            figuras del informe
-resultados/
-  resultados.json        salida completa de los experimentos
-  hallazgos_lambda.txt   atractores dominantes por régimen de lambda
-  fig1..fig5 .pdf/.png   figuras
-informe/
-  informe.tex            informe en LaTeX
-  informe.pdf            informe compilado
+  punto5_literal.py      respuesta literal al punto 5 (5 corridas + tabla A/B/C + grafica)
+  experimentos.py        estudio extendido: factorial, barrido de lambda, McNemar, Holm
+  graficas.py            figuras del estudio extendido
+RESULTADOS/
+  resultados.json          salida completa del estudio extendido (experimentos.py)
+  hallazgos_lambda.txt     atractores dominantes por régimen de lambda
+  fig1..fig5 .pdf/.png     figuras del estudio extendido (graficas.py)
+  fig_ABC_comparacion.*    grafica comparativa A/B/C del punto 5 literal (punto5_literal.py)
+informe taller_geneticos.pdf   informe completo (en la raíz del proyecto)
 ```
 
 
